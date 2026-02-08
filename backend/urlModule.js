@@ -4,7 +4,7 @@ const myUrl = new URL("http://localhost:3000/login?user=admin&role=teacher");
 
 console.log(myUrl.hostname);
 console.log(myUrl.pathname);
-console.log(myUrl.searchParams.get("role"));
+console.log(myUrl.searchParams.get("role")); //important
 console.log(myUrl.protocol);
 console.log(myUrl.port);
 console.log(myUrl.search);
