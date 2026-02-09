@@ -1,7 +1,5 @@
 const url = require("url");
-
-const myUrl = new URL("http://localhost:3000/login?user=admin&role=teacher");
-
+const myUrl = new URL("https://tech.kiet.edu/HRMS/mms/#/erp/dashboard");
 console.log(myUrl.hostname);
 console.log(myUrl.pathname);
 console.log(myUrl.searchParams.get("role")); //important
