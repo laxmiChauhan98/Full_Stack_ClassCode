@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "nodeServer.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon nodeServer.js",
     "fs": "nodemon fsModule.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
