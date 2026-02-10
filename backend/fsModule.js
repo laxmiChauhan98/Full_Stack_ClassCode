@@ -8,8 +8,8 @@ fs.readFile("data.txt","utf8",(err, data) => {
   }
   console.log("File content:", data);
 });
-console.log("request 2d data from file");
-console.log("reques 3d data from file");
+// console.log("request 2d data from file");
+// console.log("reques 3d data from file");
 
 
 
