@@ -5,7 +5,7 @@ const PORT = 3000;
 
 
 app.get("/", (req, res) => {
-  res.send("<p>Hello from Express Server and this is the home page</p>");
+  res.send("Hello from Express Server and this is the home page");
 });
 app.get("/about", (req, res) => {
   res.send("This is the about page");
