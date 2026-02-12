@@ -17,8 +17,7 @@ app.get("/read", (req, res) => {
 
 // POST → Add new employee
 app.post("/add", (req, res) => {
-  const newEmployee = req.body;
-  employees.push(newEmployee);
+  employees.push(req.body);
   res.json({
     message: "Employee added",
     employees
@@ -31,7 +30,6 @@ app.put("/update/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
   const index = employees.findIndex(emp => emp.id === id);
-
   if (index === -1) {
     return res.status(404).json({ message: "Employee not found" });
   }
@@ -60,7 +58,7 @@ app.patch("/patch/:id", (req, res) => {
     return res.status(404).json({ message: "Employee not found" });
   }
 
-  // Only update provided fields
+ //Copy only the fields present in req.body into the existing employee object.
   Object.assign(employee, req.body);
 
   res.json({
@@ -73,7 +71,11 @@ app.patch("/patch/:id", (req, res) => {
 app.delete("/delete/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
-  employees = employees.filter(emp => emp.id !== id);
+  const index = employees.findIndex(emp => emp.id === id);
+  if (index === -1) {
+    return res.status(404).json({ message: "Employee not found" });
+  }
+  employees.splice(index, 1);
 
   res.json({
     message: "Employee deleted",
