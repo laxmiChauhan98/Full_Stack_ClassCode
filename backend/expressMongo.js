@@ -4,7 +4,7 @@ const app = express();
 
 //mongo db connection
 
-mongoose.connect('mongodb+srv://admin:admin@cluster0.murhe0v.mongodb.net/companyDB?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<password>:<password>@cluster0.murhe0v.mongodb.net/companyDB?retryWrites=true&w=majority')
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB', err));  
 
